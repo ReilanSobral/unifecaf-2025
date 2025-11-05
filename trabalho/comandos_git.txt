@@ -1,0 +1,17 @@
+# Comandos para subir o repositório no GitHub
+
+# 1. Após criar o repositório no GitHub, execute:
+git remote add origin https://github.com/SEU_USUARIO/sistema-controle-pecas-unifecaf.git
+
+# 2. Renomear branch para main:
+git branch -M main
+
+# 3. Enviar para o GitHub:
+git push -u origin main
+
+# 4. Para futuras atualizações:
+git add .
+git commit -m "Sua mensagem de commit"
+git push
+
+# IMPORTANTE: Substitua SEU_USUARIO pelo seu username do GitHub!
