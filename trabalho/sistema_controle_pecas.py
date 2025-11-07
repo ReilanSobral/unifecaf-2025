@@ -76,6 +76,7 @@ def cadastrar_peca():
     if comprimento < 10 or comprimento > 20:
         motivos_reprovacao.append(f"Comprimento fora do padrão: {comprimento}cm")
     
+
     # Se não tem motivos de reprovação, peça está aprovada
     if len(motivos_reprovacao) == 0:
         pecas_aprovadas.append(peca)
@@ -153,16 +154,18 @@ def listar_caixas():
         print("   Nenhuma caixa fechada ainda.")
     else:
         for i, caixa in enumerate(caixas_fechadas):
-            print(f"\n📦 Caixa {i + 1} (10 peças):")
+            print(f"\n📦 Caixa {i + 1} Fechada (10 peças):")
             for peca in caixa:
                 print(f"   - ID: {peca['id']}")
     
     # Mostra caixa atual se tiver peças
     if len(caixa_atual) > 0:
-        print(f"\n📦 Caixa atual ({len(caixa_atual)}/10 peças):")
+        print(f"\n📦 Caixa atual em andamento ({len(caixa_atual)}/10 peças):")
         for peca in caixa_atual:
             print(f"   - ID: {peca['id']}")
 
+
+### 📋 Relatório Final
 def gerar_relatorio():
     """Gera relatório final consolidado"""
     print("\n" + "="*50)
